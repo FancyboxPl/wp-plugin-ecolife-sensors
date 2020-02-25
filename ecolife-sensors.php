@@ -8,20 +8,6 @@
 * Author URI: https://www.fancybox.pl/.
 **/
 
-function is_used_shortcode($shortcode = '') {
-    $result = false;
-    $post_to_check = get_post(get_the_ID());
-
-    if (!$shortcode) {
-        return $result;
-    }
-    if (stripos($post_to_check->post_content, '[' . $shortcode) !== false ) {
-        $result = true;
-    }
-
-    return $result;
-}
-
 add_shortcode('ecolife-sensors-map', function () {
     ob_start();
     include(dirname(__FILE__).'/templates/map.template.php');
@@ -31,13 +17,17 @@ add_shortcode('ecolife-sensors-map', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-    if (is_used_shortcode('ecolife-sensors-map')) {
+    global $post;
+
+    if (is_home() || is_front_page() || has_shortcode( $post->post_content, 'ecolife-sensors-map')) {
         wp_enqueue_style('ecolife-sensors-style', plugin_dir_url(__FILE__).'assets/css/ecolife-sensors.css');
     }
 });
 
 add_action('wp_footer', function () {
-    if (is_used_shortcode('ecolife-sensors-map')) {
+    global $post;
+
+    if (is_home() || is_front_page() || has_shortcode($post->post_content, 'ecolife-sensors-map')) {
         wp_enqueue_script('ecolife-sensors-script', plugin_dir_url(__FILE__).'assets/js/ecolife-sensors.js');
     }
 });
