@@ -33,6 +33,10 @@ class EcolifeSensors {
     ], {
       padding: [10, 10]
     });
+
+    if (window.innerWidth <= 1024) {
+      map.dragging.disable();
+    }
   }
 
   observerMap() {
