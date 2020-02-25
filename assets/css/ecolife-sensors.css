@@ -1,0 +1,74 @@
+.ecolife-sensors {
+  max-width: 100% !important;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.ecolife-sensors__map {
+  height: 100vh;
+  background: #ddd;
+  width: 65%;
+}
+
+.ecolife-sensors__content {
+  width: 35%;
+  padding: 50px 5%;
+  padding: 50px 5%;
+}
+
+.ecolife-sensors .ecolife-sensors__header {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+
+.ecolife-sensors__btn {
+  background: #000;
+  display: inline-block;
+  padding: 2px 6px;
+  line-height: 26px;
+  font-size: 12px !important;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 3px;
+  margin-bottom: 8px;
+}
+
+.ecolife-sensors__btn svg {
+  margin-right: 2px;
+  height: 16px;
+}
+
+.ecolife-sensors__btn svg,
+.ecolife-sensors__btn span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.ecolife-sensors__btn span {
+  color: #fff;
+}
+
+@media only screen and (max-width: 1200px) {
+  .ecolife-sensors__content {
+    padding: 30px 2%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .ecolife-sensors {
+    display: block;
+  }
+
+  .ecolife-sensors__map {
+    width: 100%;
+    max-height: 480px;
+  }
+
+  .ecolife-sensors__content {
+    width: 100%;
+  }
+}
