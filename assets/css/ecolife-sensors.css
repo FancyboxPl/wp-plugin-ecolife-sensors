@@ -1,8 +1,10 @@
 .ecolife-sensors {
   max-width: 100% !important;
-  background: #fff;
+  background: #04283f;
+  color: #f7f7f7;
   display: flex;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ecolife-sensors__map {
@@ -22,6 +24,11 @@
   margin: 0;
   margin-bottom: 40px;
   font-size: 36px;
+  font-weight: 500;
+}
+
+.ecolife-sensors .ecolife-sensors__p {
+  margin-bottom: 40px;
 }
 
 .ecolife-sensors__btn {
@@ -35,6 +42,11 @@
   border-radius: 5px;
   margin-right: 3px;
   margin-bottom: 8px;
+  transition: all 0.2s ease-in;
+}
+
+.ecolife-sensors__btn:hover {
+  background: #00aeef;
 }
 
 .ecolife-sensors__btn svg {
